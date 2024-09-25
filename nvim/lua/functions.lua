@@ -1,6 +1,7 @@
--- Lua Funktion für die Suche nach '- [ ]'
+-- My Custom functions
 local telescope_builtin = require('telescope.builtin')
 
+-- Search for open todos by searching "- [ ]"
 function search_todo()
   telescope_builtin.grep_string({
     search = "- [ ]",
