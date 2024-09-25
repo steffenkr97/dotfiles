@@ -5,15 +5,15 @@
 
 # Erlaube den Ordner src und seinen Inhalt
 !nvim/
-nvim/**
+!nvim/**
 
 !wezterm/
-wezterm/**
+!wezterm/**
 
 !tmux/tmux.conf
 
 !ideavim/ideavimrc
-ideavim/**
+!ideavim/**
 
 # Optional: Erlaube die .gitignore Datei selbst
 !.gitignore
