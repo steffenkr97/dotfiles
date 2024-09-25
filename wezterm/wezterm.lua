@@ -45,13 +45,13 @@ config = {
     bottom = 0,
   },
 
-  -- keys = {
-  --   {
-  --     key = 'f',
-  --     mods = 'CMD|CTRL',
-  --     action = wezterm.action.ToggleFullScreen,
-  --   },
-  -- }
+  keys = {
+    {
+      key = 'f',
+      mods = 'CMD|CTRL',
+      action = wezterm.action.ToggleFullScreen,
+    },
+  }
 }
 
 return config

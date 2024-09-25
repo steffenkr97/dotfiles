@@ -19,7 +19,7 @@ return {
   		ensure_installed = {
   			"vim", "lua", "vimdoc",
        "html", "css", "json", "kotlin",
-        "xml",
+        "xml", "markdown", "markdown_inline",
   		},
   	},
   },
