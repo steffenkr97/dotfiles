@@ -13,6 +13,7 @@ wezterm/**
 !tmux/tmux.conf
 
 !ideavim/ideavimrc
+ideavim/**
 
 # Optional: Erlaube die .gitignore Datei selbst
 !.gitignore
