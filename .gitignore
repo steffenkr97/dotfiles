@@ -1,1 +1,13 @@
-./tmux/plugins/
+# ./tmux/plugins/
+
+# Ignoriere alles
+*
+
+# Erlaube den Ordner src und seinen Inhalt
+!nvim/
+nvim/**
+
+!tmux/tmux.conf
+
+# Optional: Erlaube die .gitignore Datei selbst
+!.gitignore
