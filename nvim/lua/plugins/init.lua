@@ -34,18 +34,22 @@ return {
     },
     opts = {
       workspaces = {
+        -- {
+        --   name = "work",
+        --   path = "~/vaults/stekroll-notes/",
+        --   overrides = {
+        --     templates = {
+        --       folder = "daily notes/templates",
+        --     },
+        --     daily_notes = {
+        --       folder = "daily notes/2024/09",
+        --       template = "daily-note-template.md"  },
+        --   },
+        -- },
         {
-          name = "work",
-          path = "~/vaults/stekroll-notes/",
-          overrides = {
-            templates = {
-              folder = "daily notes/templates",
-            },
-            daily_notes = {
-              folder = "daily notes/2024/09",
-              template = "daily-note-template.md"  },
-            },
-          }
+          name = "private",
+          path = "/Users/steffenkroll/Library/Mobile Documents/iCloud~md~obsidian/Documents/steffen"
+        }
         }
       },
   },
