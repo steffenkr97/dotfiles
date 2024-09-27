@@ -34,22 +34,22 @@ return {
     },
     opts = {
       workspaces = {
-        -- {
-        --   name = "work",
-        --   path = "~/vaults/stekroll-notes/",
-        --   overrides = {
-        --     templates = {
-        --       folder = "daily notes/templates",
-        --     },
-        --     daily_notes = {
-        --       folder = "daily notes/2024/09",
-        --       template = "daily-note-template.md"  },
-        --   },
-        -- },
         {
-          name = "private",
-          path = "/Users/steffenkroll/Library/Mobile Documents/iCloud~md~obsidian/Documents/steffen"
-        }
+          name = "work",
+          path = "~/vaults/stekroll-notes/",
+          overrides = {
+            templates = {
+              folder = "daily notes/templates",
+            },
+            daily_notes = {
+              folder = "daily notes/2024/09",
+              template = "daily-note-template.md"  },
+          },
+        },
+        -- {
+        --   name = "private",
+        --   path = "/Users/steffenkroll/Library/Mobile Documents/iCloud~md~obsidian/Documents/steffen"
+        -- }
         }
       },
   },
@@ -93,6 +93,7 @@ return {
     config = function ()
       local dap, dapui = require("dap"), require("dapui")
 
+
       dap.listeners.before.attach.dapui_config = function()
         dapui.open()
       end
@@ -111,6 +112,12 @@ return {
     end
 
     
+  },
+
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^5', -- Recommended
+    lazy = false, -- This plugin is already lazy
   }
 
 
