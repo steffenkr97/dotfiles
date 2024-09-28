@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -14,19 +14,27 @@ return {
   },
 
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = {
-  		ensure_installed = {
-  			"vim", "lua", "vimdoc",
-       "html", "css", "json", "kotlin",
-        "xml", "markdown", "markdown_inline",
-  		},
-  	},
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "json",
+        "kotlin",
+        "xml",
+        "markdown",
+        "markdown_inline",
+        "rust",
+      },
+    },
   },
 
   {
     "epwalsh/obsidian.nvim",
-    version = "*",  -- recommended, use latest release instead of latest commit
+    version = "*", -- recommended, use latest release instead of latest commit
     lazy = false,
     ft = "markdown",
     dependencies = {
@@ -34,24 +42,24 @@ return {
     },
     opts = {
       workspaces = {
+        --         {
+        --           name = "work",
+        --           path = "~/vaults/stekroll-notes/",
+        --           overrides = {
+        --             templates = {
+        --               folder = "daily notes/templates",
+        --             },
+        --             daily_notes = {
+        --               folder = "daily notes/2024/09",
+        --               template = "daily-note-template.md"  },
+        --           },
+        --         },
         {
-          name = "work",
-          path = "~/vaults/stekroll-notes/",
-          overrides = {
-            templates = {
-              folder = "daily notes/templates",
-            },
-            daily_notes = {
-              folder = "daily notes/2024/09",
-              template = "daily-note-template.md"  },
-          },
+          name = "private",
+          path = "/Users/steffenkroll/Library/Mobile Documents/iCloud~md~obsidian/Documents/steffen",
         },
-        -- {
-        --   name = "private",
-        --   path = "/Users/steffenkroll/Library/Mobile Documents/iCloud~md~obsidian/Documents/steffen"
-        -- }
-        }
       },
+    },
   },
 
   {
@@ -59,10 +67,10 @@ return {
     version = "*", -- Use for stability; omit to use `main` branch for the latest features
     event = "VeryLazy",
     config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
+      require("nvim-surround").setup {
+        -- Configuration here, or leave empty to use defaults
+      }
+    end,
   },
 
   {
@@ -81,18 +89,20 @@ return {
     -- setting the keybinding for LazyGit with 'keys' is recommended in
     -- order to load the plugin when the command is run for the first time
     keys = {
-      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
-    }
+      { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
+    },
   },
 
   {
     "mfussenegger/nvim-dap",
     dependencies = {
-      "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"}
+      "rcarriga/nvim-dap-ui",
+      dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
     },
-    config = function ()
-      local dap, dapui = require("dap"), require("dapui")
+    config = function()
+      local dap, dapui = require "dap", require "dapui"
 
+      require("dapui").setup()
 
       dap.listeners.before.attach.dapui_config = function()
         dapui.open()
@@ -100,26 +110,26 @@ return {
       dap.listeners.before.launch.dapui_config = function()
         dapui.open()
       end
-      dap.listeners.before.event_terminated.dapui_config = function(      )
+      dap.listeners.before.event_terminated.dapui_config = function()
         dapui.close()
       end
       dap.listeners.before.event_exited.dapui_config = function()
         dapui.close()
       end
-
-      vim.keymap.set("n", "<leader>dt", dap.toggle_breakpoint(), {desc="Toggle Breaktpoint"})
-      vim.keymap.set("n", "<leader>dc", dap.continue(), {desc="Continue or debug programm"})
-    end
-
-    
+    end,
   },
-
   {
-    'mrcjkb/rustaceanvim',
-    version = '^5', -- Recommended
-    lazy = false, -- This plugin is already lazy
-  }
-
-
-
+    "julianolf/nvim-dap-lldb",
+    dependencies = { "mfussenegger/nvim-dap" },
+  },
+  {
+    "mrcjkb/rustaceanvim",
+    version = "^5", -- Recommended
+    lazy = false, -- This plugin is alreadylazy
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
 }
