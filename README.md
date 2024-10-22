@@ -148,6 +148,9 @@ NeoVim (https://neovim.io/) ist einer der jüngsten Ableger von vi. NeoVim kann 
 Installation:
 ```brew install neovim```
 
+NeoVim kann durch LSPs und anderen Plugins so mächtig sein wie eine IDE. Es gibt für jede Sprache eriweterungen, um den Support sicherzustellen. 
+
+
 ### Distribution NvChad
 NeoVim kann vom Grundauf komplett selber durch Lua konfiguriert und angepasst werden. Package manager wie mason und lazy helfen dabei Plugins zu installieren. 
 Für den Einstieg bietet es sich an eine Distribution zu nutzen. Diese sind vorgkonfiguriert mit Plugins, Mappings und Themes. 
@@ -160,7 +163,31 @@ Neben NvChad gibt es andere Distributionen die mehr oder weniger Features mitbri
 - https://github.com/LazyVim/LazyVim
 
 ### Meine Erweiterungen
+Siehe [Meine Nvim Konfiguration](./nvim/)
+Ich nutze verschiedene Erweiterungen, um NeoVim in verschiedenen Usecases anweden zu können. Ich erläutere mein Setup anhand der verschiedenen Usecases.
 
+#### Allgemein
+Hier führe ich allgemeine Konfigs auf. 
+
+#####  kylechui/nvim-surround
+https://github.com/kylechui/nvim-surround
+Ermöglicht es mittels vim motions Texte mit Symbolen zu umklammern. 
+
+##### mfussenegger/nvim-dap
+https://github.com/mfussenegger/nvim-dap
+dap ist ein Standard Debug Protocol und liefert eine Schnittstelle  verwendung verschiedener Debugger. Dies wird im Rust Abschitt nochmal relevant.
+
+#### Obsidian Notes
+Ich nutze NeoVim für Obsidian Notizen. 
+epwalsh/obsidian.nvim  -> https://github.com/epwalsh/obsidian.nvim 
+
+Hier sind eingie [Custom Mappings](./nvim/lua/mappings.lua) angelegt, um Offene Tasks zu filtern oder Daily Notes zu öffnen. 
+
+#### Rust Programmierung
+tbd
+
+#### Kotlin Programmierung
+tbd
 
 ## IdeaVim in Intellij
 
