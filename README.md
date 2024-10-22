@@ -49,6 +49,10 @@ Mac/ Linux
 Ich nutze auf Windows die Windows-Version, um darin WSL auszuführen.
 Konfiguration üer Lua Skript. Es kann praktisch alles verändert und modifiziert werden. In meinem Setup nutze ich nur ein Fenster ohne Tabs, mit einem Hintergrundbild.
 
+Es wird empfohlen eine Nerdfont zu nutzen. Diese beinhölt weitere sybole, welche von vielen tools genutzt werden. Es gibt eine vielzahl von Nerdfonts (https://www.nerdfonts.com/) ich nutze jetbrains.
+```brew install font-jetbrains-mono-nerd-font```
+Diese muss im lua für wezterm ausgewählt werden. 
+
 # WSL Setup
  Von den aufgeführten Tools ist WezTerm das einzige welches direkt auf Windows Installiert und ausgeführt wird, alles weitere befindet sihc innerhalb der WSL
  Alle konfigurationen werden nach dem `XDG_CONFIG_HOME` gespeichert.
@@ -100,6 +104,7 @@ Tmux erlaubt es mir innerhalb meines Terminals mehrere Fenster zu öffnen, Split
 
 ### Setup:
 [Mein Setup File](./tmux/tmux.conf)
+
 Hier installiere ich verschiedene Plugins und das Dracula THema https://github.com/dracula/tmux welches mir weitere Inforationen in einer Zeile anzeigt.
 Tmux wird über `tmux` ausgeführt. 
 
@@ -107,26 +112,59 @@ Tmux wird über `tmux` ausgeführt.
 https://tmuxcheatsheet.com/
 
 ## CLI Tools
+zsh, Tmux und wezterm bilden die Grundlage. Innerhalb dieser Grundlge nutze ich folgende Tools, bei denen ich jedoch standards wie `git` oder `maven` aus lasse. 
 
 ###  terraform aliase
-
+https://github.com/zer0beat/terraform-aliases/tree/master
 
 ### zoxide
+zoxide ist ein replacement für CD. Es merkt sich häufig besuchte Verzeichnisse und beschleunigt so die Navigation. 
+https://github.com/ajeetdsouza/zoxide 
+
 #### Installation
+```brew install zoxide```
+
+#### Setup
+```
+alias cd=z
+
+# zoxide
+eval "$(zoxide init zsh)"
+```
+
 
 ### lazygit
 Lazygit ist eine Terminal-Gui zur bedienung von Git. https://github.com/jesseduffield/lazygit/tree/master
 
-
 #### Installation
 ```brew install jesseduffield/lazygit/lazygit```
 
+### lazydocker
+#### Installation
 
 ## Text verarbeitung mit NeoVim
+NeoVim (https://neovim.io/) ist einer der jüngsten Ableger von vi. NeoVim kann voll über Lua konfiguriert und mit Plugins angereichert werden. 
 
-### Distribution
-### Erweiterungen
+Installation:
+```brew install neovim```
 
+### Distribution NvChad
+NeoVim kann vom Grundauf komplett selber durch Lua konfiguriert und angepasst werden. Package manager wie mason und lazy helfen dabei Plugins zu installieren. 
+Für den Einstieg bietet es sich an eine Distribution zu nutzen. Diese sind vorgkonfiguriert mit Plugins, Mappings und Themes. 
+
+Ich nutze die NvChad distribution https://nvchad.com/ als Grundlage und baue meine eigene Erweiterung darauf auf. 
+
+Neben NvChad gibt es andere Distributionen die mehr oder weniger Features mitbringen und so andere Grundlagen bieten.
+- https://github.com/nvim-lua/kickstart.nvim
+- https://github.com/AstroNvim/AstroNvim/tree/main
+- https://github.com/LazyVim/LazyVim
+
+### Meine Erweiterungen
+
+
+## IdeaVim in Intellij
+
+Innerhalb von Intellij nutze ich 
 
 
 
