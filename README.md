@@ -1,7 +1,3 @@
-
-
-My Cli Tools I use
-
 ## cd replacement
 brew install zoxide
 
@@ -190,9 +186,6 @@ tbd
 tbd
 
 ## IdeaVim in Intellij
-
-Innerhalb von Intellij nutze ich 
-
 
 
 
