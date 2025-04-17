@@ -83,6 +83,7 @@ nmap <leader>o <Action>(SelectInProjectView)
 nmap <leader>z <Action>(ToggleZenMode)
 nmap <leader>se <Action>(ShowErrorDescription)
 nmap <leader>p <Action>(TogglePresentationMode)
+nmap <leader>q <Action>(ActivateTerminalToolWindow)
 
 "" -- Debugging
 nmap <leader>dc <Action>(Resume)
@@ -95,8 +96,11 @@ nmap <leader>wv <Action>(SplitVertically)
 nmap <leader>wh <Action>(SplitHorizontally)
 nmap <leader>wc <Action>(Unsplit)
 nmap <leader>ww <Action>(NextSplitter)
+
+"" Tabs
 nmap <leader>tmr <Action>(MoveTabRight)
 nmap <leader>tml <Action>(MoveTabLeft)
 nmap <leader>tmd <Action>(MoveTabDown)
 nmap <leader>tmu <Action>(MoveTabUp)
 nmap <leader>tmo <Action>(MoveEditorToOppositeTabGroup)
+nmap <leader>tco <Action>(CloseAllEditorsButActive)
