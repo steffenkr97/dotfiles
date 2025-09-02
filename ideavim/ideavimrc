@@ -15,8 +15,6 @@ set incsearch
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
-" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
-
 " Highlight copied text
 set highlightedyank
 " Commentary
@@ -56,6 +54,7 @@ nmap <leader>ri <Action>(Inline)
 nmap <leader>rr <Action>(RenameElement)
 nmap <leader>rev <Action>(IntroduceVariable)
 nmap <leader>rem <Action>(ExtractMethod)
+nmap <leader>rep <Action>(IntroduceParameter)
 nmap <leader>rm <Action>(Move)
 nmap <leader>ro <Action>(OptimizeImports)
 nmap <leader>rG <Action>(Generate)
@@ -80,16 +79,20 @@ nmap <leader>dt <Action>(DebugClass)
 
 "" -- IDE Actions
 nmap <leader>o <Action>(SelectInProjectView)
-nmap <leader>z <Action>(ToggleZenMode)
+"" nmap <leader>z <Action>(ToggleZenMode)
+nmap <leader>z <Action>(ToggleDistractionFreeMode)
 nmap <leader>se <Action>(ShowErrorDescription)
 nmap <leader>p <Action>(TogglePresentationMode)
 nmap <leader>q <Action>(ActivateTerminalToolWindow)
+nmap <leader>sw <Action>(EditorToggleUseSoftWraps)
+nmap <leader>mr <Action>(ReloadAllMavenProjects)
 
 "" -- Debugging
 nmap <leader>dc <Action>(Resume)
 nmap <leader>dn <Action>(StepOver)
 nmap <leader>di <Action>(StepInto)
 nmap <leader>do <Action>(StepOut)
+nmap <leader>dm <Action>(XDebugger.MuteBreakpoints)
 
 "" Windows
 nmap <leader>wv <Action>(SplitVertically)
