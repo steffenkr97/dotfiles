@@ -67,7 +67,11 @@ nmap <leader>mt <Action>(ToggleBookmark)
 nmap <leader>ms <Action>(ShowBookmarks)
 
 "" -- Navigation
-nmap <leader>e <Action>(GotoFile)
+" Project View (angleichen an NvChad `<leader>e`)
+nmap <leader>e <Action>(SelectInProjectView)
+" Suchen / Dateien finden (NvChad: <leader>ff / <leader>fg)
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fg <Action>(FindInPath)
 nmap <leader>a <Action>(FindInPath)
 nmap gr <Action>(ShowUsages)
 nmap gi <Action>(GotoImplementation)
