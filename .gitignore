@@ -17,3 +17,4 @@
 
 # Optional: Erlaube die .gitignore Datei selbst
 !.gitignore
+!README.md
