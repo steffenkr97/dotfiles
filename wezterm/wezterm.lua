@@ -5,8 +5,8 @@ config = wezterm.config_builder()
 
 config = {
 	automatically_reload_config = true,
-    send_composed_key_when_left_alt_is_pressed = true,
-    send_composed_key_when_right_alt_is_pressed = true,
+	send_composed_key_when_left_alt_is_pressed = true,
+	send_composed_key_when_right_alt_is_pressed = true,
 	enable_tab_bar = false,
 
 	-- mac os only
@@ -52,6 +52,18 @@ config = {
 			mods = "CMD|CTRL",
 			action = wezterm.action.ToggleFullScreen,
 		},
+		-- -- Cmd+Shift+Enter → durchreichen an Neovim
+		-- {
+		-- 	key = "Enter",
+		-- 	mods = "CMD|SHIFT",
+		-- 	action = wezterm.action.SendString("\x1b[13;6u"), -- Shift+Enter Escape Code
+		-- },
+		-- -- Ctrl+Shift+Enter als Alternative
+		-- {
+		-- 	key = "Enter",
+		-- 	mods = "CTRL|SHIFT",
+		-- 	action = wezterm.action.SendString("\x1b[13;5u"), -- Ctrl+Shift+Enter
+		-- },
 	},
 }
 

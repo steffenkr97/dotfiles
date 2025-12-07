@@ -79,3 +79,14 @@ end, { desc = 'Go to next diagnostic message' })
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Formatieren
+vim.keymap.set('n', '<leader>f', function()
+  vim.lsp.buf.format { async = false }
+end, { desc = 'Format document with LSP' })
+
+-- aus intellij nachgebaut
+-- Smart Complete Statement laden
+local smart_complete = require 'core.smart-complete'
+
+vim.keymap.set('i', '<C-j>', smart_complete.complete_statement, { desc = 'Smart complete statement' })
