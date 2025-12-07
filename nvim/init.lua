@@ -31,6 +31,7 @@ require('lazy').setup {
   require 'plugins.comment',
   require 'plugins.rustacean',
   require 'plugins.debug',
+  require 'plugins.ufo-fold',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
