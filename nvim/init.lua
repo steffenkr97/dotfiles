@@ -32,6 +32,7 @@ require('lazy').setup {
   require 'plugins.rustacean',
   require 'plugins.debug',
   require 'plugins.ufo-fold',
+  require 'plugins.kotlin',
   -- require 'plugins.render-markdown',
 }
 
