@@ -119,3 +119,23 @@ nmap <leader>tmd <Action>(MoveTabDown)
 nmap <leader>tmu <Action>(MoveTabUp)
 nmap <leader>tmo <Action>(MoveEditorToOppositeTabGroup)
 nmap <leader>tco <Action>(CloseAllEditorsButActive)
+
+
+" Press jk fast to exit insert mode
+inoremap jk <ESC>
+inoremap kj <ESC>
+
+
+" Git
+" Blame an/aus
+nnoremap <leader>gb :ToggleLineBlame<CR>
+" nmap <leader>gb <Action>(ToggleLineBlame)
+
+" Git Log für Datei
+nnoremap <leader>gl :Vcs.ShowTabbedFileHistory<CR>
+
+" Letzten Commit anzeigen
+nnoremap <leader>gc :Git.Show.Commit.In.Log<CR>
+
+" Compare with Branch
+nnoremap <leader>gd :Compare.SameVersion<CR>
