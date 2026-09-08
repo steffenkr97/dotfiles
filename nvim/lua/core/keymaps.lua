@@ -35,8 +35,10 @@ vim.keymap.set('n', '<Left>', ':vertical resize -2<CR>', opts)
 vim.keymap.set('n', '<Right>', ':vertical resize +2<CR>', opts)
 
 -- Buffers
-vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
-vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
+-- vim.keymap.set('n', '<Tab>', ':bnext<CR>', opts)
+-- vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', opts)
+vim.keymap.set('n', 'ö', ':bnext<CR>', opts)
+vim.keymap.set('n', 'Ö', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<leader>x', ':bdelete!<CR>', opts) -- close buffer
 vim.keymap.set('n', '<leader>b', '<cmd> enew <CR>', opts) -- new buffer
 
@@ -79,3 +81,14 @@ end, { desc = 'Go to next diagnostic message' })
 
 vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+-- Formatieren
+vim.keymap.set('n', '<leader>f', function()
+  vim.lsp.buf.format { async = false }
+end, { desc = 'Format document with LSP' })
+
+-- aus intellij nachgebaut
+-- Smart Complete Statement laden
+local smart_complete = require 'core.smart-complete'
+
+vim.keymap.set('i', '<C-j>', smart_complete.complete_statement, { desc = 'Smart complete statement' })

@@ -29,6 +29,11 @@ require('lazy').setup {
   require 'plugins.indent-blankline',
   require 'plugins.misc',
   require 'plugins.comment',
+  require 'plugins.rustacean',
+  require 'plugins.debug',
+  require 'plugins.ufo-fold',
+  require 'plugins.kotlin',
+  -- require 'plugins.render-markdown',
 }
 
 -- The line beneath this is called `modeline`. See `:help modeline`

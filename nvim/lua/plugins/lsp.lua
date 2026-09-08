@@ -156,6 +156,7 @@ return {
       terraformls = {},
       jsonls = {},
       yamlls = {},
+      kotlin_lsp = {},
       lua_ls = {
         settings = {
           Lua = {
